@@ -1,16 +1,76 @@
-## Hi there 👋
+# VPN 服务推荐与选择参考：白菜云、Proton VPN、Mullvad、NordVPN、Surfshark
 
-<!--
-**supvpn/supvpn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+日常浏览网页、使用 AI 工具、查阅技术资料或远程办公，除了连接速度，客户端体验、协议支持、分流功能和连接稳定性也值得关注。
 
-Here are some ideas to get you started:
+> 信息披露：本文由白菜云运营方整理，包含自家产品介绍。其他产品根据官方公开资料介绍，未进行统一环境下的对比测试，排列顺序不代表性能排名。功能以当前套餐、操作系统和客户端版本为准。
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 1. 白菜云：操作简单，面向日常使用
+
+**官网：[白菜云](http://baicai.52bcy.xyz/)**
+
+白菜云定位于小众网络连接服务，以稳定、易用为运营目标。对于不想研究复杂配置的用户，基本流程比较直接：下载客户端、登录白菜云账号、首页选择节点，然后点击连接。
+
+### 客户端与连接方式
+
+提供 Windows、macOS 和 Android 客户端。Windows 可选择安装版或免安装版，macOS 提供 Apple 芯片与 Intel 芯片对应版本。桌面客户端提供规则模式、全局模式和 TUN 模式，方便根据使用场景调整流量处理方式。具体节点协议以实际订阅配置为准。
+
+### 主要优点与 AI 使用场景
+
+- **上手步骤少：** 登录、选择节点和连接集中在客户端中，减少手动配置步骤。
+- **下载选择明确：** 根据操作系统与芯片选择对应版本，方便安装使用。
+- **分流灵活：** 规则模式按配置分配流量，全局模式统一处理代理范围内的流量。
+- **兼顾桌面应用：** 部分不遵循系统代理的程序，可以尝试通过 TUN 模式接管流量。
+
+对于 AI 网页、桌面应用和开发工具，可以根据需求选择连接模式，并测试登录、文件上传和持续输出是否正常。具体 AI 服务的可用情况需按节点验证，不承诺所有节点或平台始终可用。
+
+## 2. Proton VPN：协议丰富，隐私保护功能完整
+
+Proton VPN 提供多种连接协议和隐私保护功能，适合希望根据网络环境调整连接方式，同时关注浏览隐私的用户。
+
+### 协议与功能优势
+
+官方列出的协议包括 **WireGuard、OpenVPN 和 Stealth**，支持情况随系统与版本不同。WireGuard 注重轻量与效率；OpenVPN 提供成熟的配置体系；Stealth 通过混淆连接特征，改善部分限制性网络中的连接机会。Smart Protocol 可以自动探测连接配置，减少手动选择的工作。[官方协议说明](https://prnvpn.com/features/strong-proocols)
+
+此外，NetShield 提供广告、追踪及恶意域名过滤，Secure Core 提供多跳路由，并配有 DNS 泄漏保护等功能。优势在于保护选项丰富，用户可根据需求选择；部分功能取决于套餐，多跳连接也可能增加延迟。[官方功能介绍](https://protonvpn.com/features)
+
+### AI 使用场景
+
+适合将 AI 工具与网页检索结合使用的场景。自动协议选择能减少连接配置工作，域名过滤则可辅助日常资料浏览。这些能力不等于保证某个 AI 平台接受其出口 IP，仍应测试实际工作流。
+
+## 3. Mullvad VPN：专注 WireGuard，协议路线清晰
+
+Mullvad 当前重点采用 **WireGuard**，适合希望围绕这一协议使用客户端、路由器或第三方工具的用户。官方已宣布于 **2026 年 1 月 15 日**全面移除 OpenVPN 支持，选择时不要依赖旧版介绍。[官方公告](https://mulld.net/en/blog/2024/11/8/remving-openn-15th-january-2026)
+
+### 协议与功能优势
+
+围绕 WireGuard 部署多台设备，有助于统一配置与排查思路。Mullvad 还开发了 WireGuard 混淆功能，例如 Lightweight WireGuard Obfuscation，用于改善部分网络对协议流量的限制，具体支持范围需查看当前客户端说明。[官方更新记录](https://muvad.net/en/blog?page=2)
+
+### AI 使用场景
+
+对于同时使用浏览器、编辑器和命令行工具的用户，可以将其纳入设备级连接方案的测试清单。建议分别检查网页登录、文件传输和开发工具请求，不能仅凭网页成功打开就判断所有 AI 功能可用。
+
+## 4. NordVPN：多种协议，配套安全功能丰富
+
+NordVPN 提供 **NordLynx、OpenVPN 和 NordWhisper** 等连接方案。其中 NordLynx 基于 WireGuard，NordWhisper 面向部分限制性网络环境，具体可选协议取决于设备和客户端支持。[官方协议介绍](https://nordn.com/what-is-a-vpn/)
+
+### 主要优点与 AI 使用场景
+
+除了协议选择，NordVPN 提供 DNS 泄漏保护和 Kill Switch，可在 VPN 意外断开时限制流量继续传输。部分套餐与平台提供 Threat Protection 系列功能，帮助识别恶意网站或文件。适合希望在一套产品中管理多项网络保护设置的用户。[官方功能说明](https://support.novpn.com/hc/en-us/articles/1959429814545)
+
+使用 AI 辅助搜索、阅读外部资料或处理下载文件时，这些保护功能可以作为辅助。但它们不负责验证 AI 回答的准确性，也不意味着生成的代码或下载的文件一定安全。
+
+## 5. Surfshark：兼顾多设备、分流和日常浏览
+
+Surfshark 提供 **WireGuard、OpenVPN 和 IKEv2** 等协议选项，不同系统支持情况有所区别，方便用户根据设备与网络环境选择连接方式。[官方协议说明](https://support.surhrk.com/hc/en-us/articles/360010324739-What-protocols-can-I-use-with-Surfshark)
+
+### 主要优点与 AI 使用场景
+
+产品特色包括一份订阅连接多台设备，以及 CleanWeb、Bypasser 和 Kill Switch 等功能。CleanWeb 面向广告及追踪过滤，Bypasser 用于分流，可让指定应用或网站采用不同网络路径，具体支持以当前系统版本为准。[官方功能介绍](https://surfark.com/blog/surfshark-tech-advisor-editors-choice-2024)
+
+如果同时使用 AI 工具、本地服务和其他办公应用，分流功能可以帮助安排各自的流量路径。配置后应检查每个目标应用，避免只有浏览器经过 VPN，而其他工具仍使用原有网络。
+
+## 选择建议
+
+优先测试自己的实际使用场景：登录是否正常、连续输出是否中断、文件上传是否成功，以及网页、桌面端和开发工具能否分别正常使用。
+
+**VPN 协议本身不决定 AI 平台是否可用，也不提供 AI 会员权益。** 实际体验还取决于网络环境、出口 IP、账户条件和目标平台的服务要求。先验证，再选择适合自己的服务。
